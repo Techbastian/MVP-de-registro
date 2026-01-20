@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: disruptia-mvp
+    env: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm run start
+    envVars:
+      - key: GOOGLE_SERVICE_ACCOUNT_EMAIL
+        sync: false
+      - key: GOOGLE_PRIVATE_KEY
+        sync: false
+      - key: GOOGLE_DRIVE_FOLDER_ID
+        sync: false
+      - key: GOOGLE_DRIVE_VACANCIES_FOLDER_ID
+        sync: false
+      - key: FIREBASE_DB_URL
+        sync: false
+      - key: FIREBASE_PROJECT_ID
+        sync: false
+      - key: NODE_VERSION
+        value: 20.x
