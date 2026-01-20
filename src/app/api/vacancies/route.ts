@@ -3,6 +3,7 @@ import { google } from 'googleapis';
 import { JWT } from 'google-auth-library';
 import { db } from '@/lib/firebaseAdmin';
 import { Readable } from 'stream';
+import { parsePrivateKey } from '@/lib/utils';
 
 const SCOPES = ['https://www.googleapis.com/auth/drive'];
 
@@ -44,7 +45,7 @@ export async function POST(req: NextRequest) {
 
         // 1. Auth with Google Service Account
         const clientEmail = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
-        const privateKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n');
+        const privateKey = parsePrivateKey(process.env.GOOGLE_PRIVATE_KEY);
 
         if (!clientEmail || !privateKey) {
             return NextResponse.json({
