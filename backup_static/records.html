@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disruptia - Talent Records</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Ionicons for icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <a href="#" class="brand">
+                <div class="brand-icon">
+                    <ion-icon name="rocket"></ion-icon> <!-- Changed icon to match 2nd image -->
+                </div>
+                <div class="brand-text">
+                    Disruptia
+                    <small>RECRUITMENT PRO</small>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <li>
+                    <a href="#" class="nav-link">
+                        <ion-icon name="grid-outline"></ion-icon>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="records.html" class="nav-link active">
+                        <ion-icon name="people"></ion-icon>
+                        Talent Records
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html" class="nav-link">
+                        <ion-icon name="person-add-outline"></ion-icon>
+                        Registrations
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <ion-icon name="briefcase-outline"></ion-icon>
+                        Open Roles
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <ion-icon name="settings-outline"></ion-icon>
+                        Settings
+                    </a>
+                </li>
+            </ul>
+
+            <button class="btn-new-talent" onclick="window.location.href='index.html'">
+                <ion-icon name="add-outline"></ion-icon>
+                New Talent
+            </button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <h1 class="page-title">Talent Records</h1>
+                    <p class="page-subtitle">Viewing 128 registered candidates in the pipeline</p>
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn">
+                        <ion-icon name="notifications-outline"></ion-icon>
+                    </button>
+                    <button class="icon-btn" style="border: none; padding: 0;">
+                        <img src="https://ui-avatars.com/api/?name=Admin&background=E5E7EB&color=6B7280" class="avatar"
+                            style="width: 40px; height: 40px;">
+                    </button>
+                </div>
+            </header>
+
+            <!-- Controls -->
+            <div class="controls-bar">
+                <div class="search-bar">
+                    <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                    <input type="text" placeholder="Search by name, document ID, or expertise...">
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn-outline">
+                        <ion-icon name="filter-outline"></ion-icon>
+                        Filters
+                    </button>
+                    <button class="btn-outline">
+                        <ion-icon name="download-outline"></ion-icon>
+                        Export
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs-container">
+                <div class="tab-pill active">
+                    All Candidates <span class="tab-count">128</span>
+                </div>
+                <div class="tab-pill">
+                    Shortlisted <span class="tab-count">42</span>
+                </div>
+                <div class="tab-pill">
+                    Interviewed <span class="tab-count">18</span>
+                </div>
+                <div class="tab-pill">
+                    Verified <span class="tab-count">65</span>
+                </div>
+            </div>
+
+            <!-- List -->
+            <div class="records-list">
+                <div class="list-header">
+                    <div>Candidate Name</div>
+                    <div>Document ID</div>
+                    <div>Age</div>
+                    <div>Status</div>
+                    <div style="text-align: right;">Actions</div>
+                </div>
+
+                <!-- Item 1: Simple (Active) -->
+                <div class="candidate-item">
+                    <div class="candidate-row">
+                        <div class="candidate-info">
+                            <div class="initials-avatar">JD</div>
+                            <div class="candidate-name">
+                                <h4>Johnathan Doe</h4>
+                                <span>Senior Frontend Engineer</span>
+                            </div>
+                        </div>
+                        <div style="font-family: monospace; color: #4B5563;">102.938.475</div>
+                        <div>28 yrs</div>
+                        <div><span class="status-badge status-active">Active</span></div>
+                        <div style="text-align: right;">
+                            <span class="action-link">View Details</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Expanded (Alice) -->
+                <div class="candidate-item expanded">
+                    <div class="candidate-row">
+                        <div class="candidate-info">
+                            <div class="initials-avatar" style="background: #6200EA; color: white;">AS</div>
+                            <div class="candidate-name">
+                                <h4>Alice Smithers</h4>
+                                <span>Project Manager • London, UK</span>
+                            </div>
+                        </div>
+                        <div style="font-family: monospace; color: #4B5563;"></div>
+                        <!-- Empty in design for expanded? Or hidden. -->
+                        <!-- Actually design has buttons in the row when expanded? No, it looks like standard row but with buttons on right. -->
+                        <div></div>
+                        <div></div>
+                        <div class="d-flex align-center gap-2 justify-between" style="justify-content: flex-end;">
+                            <!-- In the mockup, when expanded, the right side has 'Edit' and 'Open CV' buttons on the row itself?
+                                Or is that the "Expanded" header?
+                                Looking closely at image 2:
+                                It seems the row transforms or has extra buttons. 
+                                "Edit" (outline) and "Open CV" (solid purple) buttons are visible on the row line. 
+                           -->
+                            <button class="btn-outline no-trigger" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">
+                                <ion-icon name="pencil-outline"></ion-icon> Edit
+                            </button>
+                            <button class="btn-primary no-trigger"
+                                style="padding: 0.4rem 0.8rem; font-size: 0.8rem; box-shadow: none;">
+                                <ion-icon name="document-text-outline"></ion-icon> Open CV
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="expanded-content">
+                        <div class="expanded-grid">
+                            <!-- Left: Summary -->
+                            <div class="summary-card">
+                                <h5
+                                    style="font-size: 0.75rem; letter-spacing: 0.05em; color: var(--text-secondary); text-transform: uppercase;">
+                                    Candidate Summary</h5>
+
+                                <div class="summary-details">
+                                    <div class="detail-group">
+                                        <h6>Email</h6>
+                                        <p>alice.smithers@domain.com</p>
+                                    </div>
+                                    <div class="detail-group">
+                                        <h6>Phone</h6>
+                                        <p>+44 7700 900077</p>
+                                    </div>
+                                    <div class="detail-group">
+                                        <h6>Education</h6>
+                                        <p>MSc Management, UCL</p>
+                                    </div>
+                                    <div class="detail-group">
+                                        <h6>Language</h6>
+                                        <p>English (Native), French (B2)</p>
+                                    </div>
+                                </div>
+
+                                <div class="internal-note">
+                                    "Strong focus on Agile methodologies and team leadership. Highly recommended for the
+                                    current Fintech opening."
+                                </div>
+                            </div>
+
+                            <!-- Right: CV Preview -->
+                            <div class="cv-card">
+                                <div class="cv-preview-content">
+                                    <ion-icon name="document-text" class="cv-icon"></ion-icon>
+                                    <div>
+                                        <p style="font-weight: 600; font-size: 0.9rem;">Curriculum_Vitae_2024.pdf</p>
+                                        <p style="font-size: 0.75rem; color: var(--text-secondary);">Uploaded 2 days ago
+                                        </p>
+                                    </div>
+                                    <a href="#" class="action-link"
+                                        style="font-size: 0.8rem; text-decoration: underline;">Quick Preview</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Robert -->
+                <div class="candidate-item">
+                    <div class="candidate-row">
+                        <div class="candidate-info">
+                            <div class="initials-avatar alt2">RW</div>
+                            <div class="candidate-name">
+                                <h4>Robert Wilson</h4>
+                                <span>Data Scientist</span>
+                            </div>
+                        </div>
+                        <div style="font-family: monospace; color: #4B5563;">554.433.221</div>
+                        <div>32 yrs</div>
+                        <div><span class="status-badge status-interviewing">Interviewing</span></div>
+                        <div style="text-align: right;">
+                            <span class="action-link">View Details</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Alice Brown -->
+                <div class="candidate-item">
+                    <div class="candidate-row">
+                        <div class="candidate-info">
+                            <div class="initials-avatar alt">AB</div>
+                            <div class="candidate-name">
+                                <h4>Alice Brown</h4>
+                                <span>UX Designer</span>
+                            </div>
+                        </div>
+                        <div style="font-family: monospace; color: #4B5563;">223.344.556</div>
+                        <div>24 yrs</div>
+                        <div><span class="status-badge status-pending">Pending</span></div>
+                        <div style="text-align: right;">
+                            <span class="action-link">View Details</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+            <div
+                style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; color: var(--text-secondary); font-size: 0.875rem;">
+                <div>Showing 1-10 of 128 candidates</div>
+                <div class="d-flex gap-2">
+                    <button class="btn-outline" style="padding: 0.5rem 0.75rem;">‹</button>
+                    <button class="btn-primary"
+                        style="padding: 0.5rem 0.875rem; background: var(--primary-purple); box-shadow: none;">1</button>
+                    <button class="btn-outline"
+                        style="padding: 0.5rem 0.75rem; border: none; background: transparent;">2</button>
+                    <button class="btn-outline"
+                        style="padding: 0.5rem 0.75rem; border: none; background: transparent;">3</button>
+                    <span style="display: flex; align-items: center;">...</span>
+                    <button class="btn-outline"
+                        style="padding: 0.5rem 0.75rem; border: none; background: transparent;">13</button>
+                    <button class="btn-outline" style="padding: 0.5rem 0.75rem;">›</button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

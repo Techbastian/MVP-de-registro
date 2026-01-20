@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disruptia - Talent Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Ionicons for icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <a href="#" class="brand">
+                <div class="brand-icon">
+                    <ion-icon name="flash"></ion-icon>
+                </div>
+                <div class="brand-text">
+                    Disruptia
+                    <!-- small>Recruitment Pro</small -->
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <li>
+                    <a href="index.html" class="nav-link active">
+                        <ion-icon name="person-add-outline"></ion-icon>
+                        Register Talent
+                    </a>
+                </li>
+                <li>
+                    <a href="records.html" class="nav-link">
+                        <ion-icon name="people-outline"></ion-icon>
+                        View Talent List
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <ion-icon name="bar-chart-outline"></ion-icon>
+                        Analytics
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <ion-icon name="settings-outline"></ion-icon>
+                        Configuration
+                    </a>
+                </li>
+            </ul>
+
+             <!-- Bottom Footer User -->
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=Admin+User&background=random" alt="Admin" class="avatar">
+                    <div class="user-info">
+                        <h5>Admin User</h5>
+                        <p>admin@disruptia.io</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <div class="breadcrumbs">Talent Management &nbsp;›&nbsp; Registration</div>
+                    <h1 class="page-title">Talent Registration</h1>
+                    <p class="page-subtitle">Onboard elite talent into the Disruptia ecosystem. Fill out the professional profile below to begin the verification process.</p>
+                </div>
+                <!-- Optional header actions could go here -->
+            </header>
+
+            <form class="form-container">
+                <!-- Personal Info Section -->
+                <div class="form-card">
+                    <h2 class="section-title">
+                        <ion-icon name="briefcase"></ion-icon> <!-- Using briefcase as placeholder for the icon in image -->
+                        Personal Information
+                    </h2>
+
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label>Name</label>
+                            <input type="text" class="form-input" placeholder="e.g. Alexander">
+                        </div>
+                        <div class="input-group">
+                            <label>Surname</label>
+                            <input type="text" class="form-input" placeholder="e.g. Hamilton">
+                        </div>
+                        <div class="input-group">
+                            <label>Date of Birth</label>
+                            <input type="date" class="form-input" placeholder="mm/dd/yyyy">
+                        </div>
+                        <div class="input-group">
+                            <label>Document Number (ID/Passport)</label>
+                            <input type="text" class="form-input" placeholder="Enter identification number">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Documents Section -->
+                <div class="form-card">
+                    <h2 class="section-title">
+                        <ion-icon name="document-text"></ion-icon> 
+                        Professional Documents
+                    </h2>
+
+                    <div class="upload-area">
+                        <div class="upload-icon-circle">
+                            <ion-icon name="cloud-upload-outline" style="font-size: 32px;"></ion-icon>
+                        </div>
+                        <p class="upload-text">Upload Curriculum Vitae</p>
+                        <p class="upload-subtext">Drag and drop your PDF file here, or <span class="upload-link">browse files</span></p>
+                        <p class="upload-subtext" style="font-size: 0.75rem; color: #9CA3AF;">Accepted format: PDF only (Max 10MB)</p>
+                    </div>
+                </div>
+
+                <!-- Consent -->
+                <div class="consent-box">
+                    <div class="checkbox"></div> <!-- Custom checkbox styling -->
+                    <div>
+                        <strong>Accept Data Processing</strong>
+                        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.25rem;">
+                            I consent to the processing of my personal data for recruitment and selection purposes according to the <span style="color: var(--primary-purple); font-weight: 600;">Privacy Policy</span>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Submit Action -->
+                <div class="submit-container">
+                    <button type="button" class="btn-primary">
+                        Register Talent
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
